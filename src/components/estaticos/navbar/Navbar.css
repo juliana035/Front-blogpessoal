@@ -1,8 +1,11 @@
 .cursor{
     cursor: pointer;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .text-decorator-none{
 
     text-decoration: none;
+}
+.navBarra{
+    background: #5e400a;
 }

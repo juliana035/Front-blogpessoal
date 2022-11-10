@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+*{
+  font-family: 'Kalam', cursive !important;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

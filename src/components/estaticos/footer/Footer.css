@@ -1,10 +1,10 @@
 .box1{
-    background-color: #3F51B5;
+    background-color: #724407;
      height :120px;
 }
 
 .box2{
-     background-color: #303F9F;
+     background-color: #161007;
       height: 60px;
 }
 
@@ -14,4 +14,7 @@
 }
 .textos{
      color: white;
+}
+.footer{
+     background:#5e400a;
 }

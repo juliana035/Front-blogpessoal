@@ -2,11 +2,9 @@ import axios from 'axios';
 
 export const api = axios.create({
     baseURL: 'https://projetoblogpessoal.onrender.com'
-    // baseURL: 'https://blogdothiagofaccipieri.onrender.com'
+    
 })
 
-// thiago@email.com 
-// senha: 123456789
 
 export const cadastroUsuario = async (url: any, dados: any, setDados: any) => {
     const resposta = await api.post(url, dados)
