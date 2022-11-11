@@ -1,3 +1,13 @@
 .text-decorator-none{
     text-decoration: none;
+    
+}
+.corzinha{
+    background-color:#5e400a !important;
+     color:white !important;
+}
+
+.deletar{
+    background-color:#5e400a !important;
+     color:white !important;
 }

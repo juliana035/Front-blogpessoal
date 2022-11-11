@@ -1,16 +1,21 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
 import { login } from "../../services/Service";
 import { Box } from "@mui/material";
 import "./Login.css";
 import UserLogin from "../../models/UserLogin";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
+import { toast } from "react-toastify";
 
 function Login() {
   let history = useNavigate();
 
-  const [token, setToken] = useLocalStorage('token');
+ 
+  const dispatch = useDispatch();
+    const [token,setToken] = useState ('')
+  
 
   const [userLogin, setUserLogin] = useState<UserLogin>({
     id: 0,
@@ -32,6 +37,7 @@ function Login() {
 
   useEffect(() => {
     if (token != '') {
+      dispatch(addToken(token))
       history('/home');
     }
   }, [token]);
@@ -41,9 +47,25 @@ function Login() {
 
     try {
       await login(`/usuarios/logar`, userLogin, setToken)
-      alert('Usuário logado com sucesso!');
+      toast.success(' Usuario logado com sucesso ',{
+        position: "top-right",
+        autoClose:2000,
+        hideProgressBar: false,
+        pauseOnHover:false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
     } catch (error) {
-      alert('Dados do usuário incorreto.');
+      toast.error(' Dados incosistentes.Favor verificar as informações de cadastro',{
+        position: "top-right",
+        autoClose:2000,
+        hideProgressBar: false,
+        pauseOnHover:false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
     }
 
   }
