@@ -67,6 +67,9 @@ function ListaPostagem() {
                 <Typography variant="body2" component="p">
                   {post.tema?.descricao}
                 </Typography>
+                <Typography>
+                  {new Date(Date.parse(post.data)).toLocaleDateString('pt-br')}
+                </Typography>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
