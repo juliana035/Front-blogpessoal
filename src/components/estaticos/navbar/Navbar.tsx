@@ -37,7 +37,7 @@ function Navbar() {
 var navbarCompnent;
 
 if(token !=""){
-navbarCompnent = <AppBar position="static">
+  navbarCompnent = <AppBar position="static">
 <Toolbar variant="dense" className='navBarra'>
   <Box className='cursor'>
     <Typography variant="h5" color="inherit">
