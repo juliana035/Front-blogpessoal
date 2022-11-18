@@ -88,7 +88,7 @@ if(token !=""){
 
   return (
     <>
-      {navbarCompnent}
+      {navbarComponent}
     </>
   )
 }
